@@ -1,0 +1,1 @@
+In order to get this to work download unity and run the file LeapCityScene.unity located in the Assets folder. Also, you'll need a leap motion.
