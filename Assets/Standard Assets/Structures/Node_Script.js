@@ -5,6 +5,8 @@ var Single_Sq_Med : Transform;
 var Single_Hex_Lar : Transform;
 var Single_Hex_Med : Transform;
 
+var Scale : float = 2;
+
 private var playerObject : GameObject;
 private var playerPos : Vector3;
 
@@ -90,15 +92,11 @@ function Start () {
 
 function Update () {
 	var playerPos:Vector3 = playerObject.transform.position;
-	if((transform.position.z-playerPos.z)<(-605.2))
+	if((transform.position.z-playerPos.z)<(-605.2)*Scale)
 	{
 		Destroy(gameObject);
 	}
-	if((transform.position.z-playerPos.z)>(605.2))
-	{
-		Destroy(gameObject);
-	}
-	if(Mathf.Abs(transform.position.x-playerPos.x)>600)
+	if(Mathf.Abs(transform.position.x-playerPos.x)>600*Scale)
 	{
 		Destroy(gameObject);
 	}

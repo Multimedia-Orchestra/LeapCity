@@ -1,6 +1,7 @@
 #pragma strict
 
 var Node : Transform;
+var Scale : float = 2;
 
 
 //var Base : Transform;
@@ -10,11 +11,11 @@ function Start () {
 	var n = 30;
 	for (var x=1;x<n;x++)
 	{
-		Instantiate(Node,Vector3(transform.position.x+n*(-20)+x*(40),0,transform.position.z+n*17.8-71.2),Quaternion.identity);
+		Instantiate(Node,Vector3(transform.position.x+n*(-20)*Scale+x*(40)*Scale,0,transform.position.z+n*17.8*Scale-71.2*Scale),Quaternion.identity);
 	}
 	for (var y=1;y<n;y++)
 	{
-		Instantiate(Node,Vector3(transform.position.x+n*(-20)+y*(40)-20,0,transform.position.z+n*17.8-35.6),Quaternion.identity);
+		Instantiate(Node,Vector3(transform.position.x+n*(-20)*Scale+y*(40)*Scale-20,0,transform.position.z+n*17.8*Scale-35.6*Scale),Quaternion.identity);
 	}
 	//Instantiate(Single_Tri_Lar,Vector3(0,0,0),Quaternion.identity);
 //	var x_local = 0;

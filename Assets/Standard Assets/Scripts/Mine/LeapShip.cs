@@ -50,14 +50,15 @@ public class LeapShip : MonoBehaviour {
     			}
 				
 				//Move Shi
-				rigidbody.velocity = transform.forward * 1.0f * (totalDis/fingers.Count);
+				rigidbody.velocity = transform.forward * 0.012f * (totalDis/fingers.Count) * (totalDis/fingers.Count);
 			}
 			
 			//Check Gestures
+			/*
 			var gestures = frame.Gestures();
 			
 			var enumGestures = gestures.GetEnumerator();
-			
+
         	for (int i = 0; i < gestures.Count; i++)
 			{
 				while(true)
@@ -74,6 +75,7 @@ public class LeapShip : MonoBehaviour {
 					}
 				}
         	}
+        	*/
 			
 			// Get the hand's normal vector and direction
 			Vector normal = hand.PalmNormal;
